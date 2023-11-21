@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat' , sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #263138
+}
+
+header {
+    background-color: #FF9A6C;
+    padding: 24px 80px 24px 80px;
+    display: flex; /*permite que seja alteradas as propriedade dos objetos, neste caso, no alinhamento*/
+    align-items: center; /*basicamente é a formatação do alinhamento vertical*/
+    justify-content: space-between; /* faz com que os itens fiquem alinhados na mesma linha, formatação horizontal */
+}
+
+header > nav > a {
+    color: white;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 80px 24px 80px;
+    position: relative;
+}
+
+h1, h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+.paragrafo {
+    line-height: 150%; /* altura da linha */
+    margin-bottom: 32px;
+}
+
+.botao {
+    background-color: #FF725E;
+    padding: 16px 32px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.botao-transparente {
+    background-color: transparent;
+    color: #FF725E;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+}
+
+.absolute {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    width: 100%;
+    z-index: -10; /*posição de profundidade do elemento. Basicamente, coloca a imagem ao fundo dos demais elementos*/
+}
+#clinica {
+    display: flex;
+    align-items: center;
+    gap: 64px; /*espaço entre os elementos*/
+    padding: 64px 80px;
+}
+
+#clinica li {
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+#farmacia {
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#farmacia img {
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+#duvidas {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+.duvida {
+    position: relative; /*serve como âncora para os elementos com position absolute*/
+}
+
+.duvida h3 {
+    border: 2px solid #FF725E;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.duvida img {
+    position: absolute; /*aqui pode mexer na propriedade do objeto com base no elemento definido com position relative*/
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo {
+    border-right: 1px solid #FF725E;
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #FF725E;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0;
+    overflow: hidden; /*configuração para ocultar o conteúdo que transborda do elemento principal*/
+    opacity: 0;
+    transition: .2s;
+}
+
+.duvida.ativa .paragrafo {
+    height: fit-content;
+    opacity: 1;
+    padding: 24px;
+}
+
+footer {
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex;
+    gap: 80px;
+    padding: 64px 80px;
+    justify-content: space-between; /*dispõe os elementos na horizontal para que seja ajustados os espaços entre os elementos*/
+}
+
+footer .titulo, footer img  {
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: block;
+}
+
+footer nav a {
+    color: #263138;
+    display: block; /*aqui ele gera uma quebra de linha, pois transforma o elemento em um bloco*/
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+footer p {
+    margin-bottom: 10px;
+    max-width: 350px;
+}
+
+footer p a {
+    color: #FF725E;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#copyright {
+    background-color: #263138;
+    text-align: center;
+    padding: 24px;
+    color: white;
+}
+
+#copyright a {
+    color: #FF9A6C;
+    text-decoration: none;
+    font-weight: bold;
+}
